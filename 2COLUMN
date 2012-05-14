@@ -1,0 +1,59 @@
+<?php
+/*
+Template Name:2-column_page
+*/
+
+get_header(); ?>
+			
+			<!--==============================content================================-->
+                     <div id="right_side">
+
+        <?php
+		    if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Donation')) : // Each sidebar name
+		?>
+		<?php
+		    endif;
+		?>
+        <div class="spotlights">
+            <?php
+		    if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Help Family')) : // Each sidebar name
+		?>
+		<?php
+		    endif;
+		?>
+        </div>
+    
+    </div><!--#right_side-->
+    
+	<div id="main">
+				
+<!-- This is where the donate form needs to go-->
+<?php if (have_posts()) : while (have_posts()) : the_post();?>
+<article id="post-<?php the_ID(); ?>">
+	
+		<h2><span class="darkblue"><?php the_title(); ?></span></h2>
+	
+
+	
+		<?php the_content('<p><span class="darkgrey">','</span></p>'); ?>
+		
+	
+	<footer class="entry-meta">
+		<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
+	</footer><!-- .entry-meta -->
+</article><!-- #post-<?php the_ID(); ?> -->
+<?php endwhile; endif; ?>
+<p>
+	&nbsp;</p>
+<div>
+	&nbsp;</div>
+<p>
+	&nbsp;</p>
+
+<div class="clear">
+    &nbsp;
+</div>
+    </div>  
+			
+
+<?php get_footer(); ?>

@@ -1,0 +1,38 @@
+<?php
+     // The donation sidebar
+     if(function_exists('register_sidebar'))
+          register_sidebar(array(
+          'name' => 'Donation', // The sidebar name to register
+          'before_widget' => '<div class="donate_box">',
+          'after_widget' => '</div>',
+          'before_title' => '<h3>',
+          'after_title' => '</h3>',
+     ));
+     // The help a family sidebar
+     if(function_exists('register_sidebar'))
+          register_sidebar(array(
+          'name' => 'Help Family', // The sidebar name to register
+          'before_widget' => '<div class="spotlight">',
+          'after_widget' => '</div>',
+          'before_title' => '<h2>',
+          'after_title' => '</h2>',
+     ));
+     // The Guarantee sidebar
+     if(function_exists('register_sidebar'))
+          register_sidebar(array(
+          'name' => 'Guarantee', // The sidebar name to register
+          'before_widget' => '<div class="spotlight01">',
+          'after_widget' => '</div>',
+          'before_title' => '<h2>',
+          'after_title' => '</h2>',
+     ));
+    // The Why Donate to Us sidebar
+     if(function_exists('register_sidebar'))
+          register_sidebar(array(
+          'name' => 'Why Donate', // The sidebar name to register
+          'before_widget' => '<div class="spotlight02">',
+          'after_widget' => '</div>',
+          'before_title' => '<h2>',
+          'after_title' => '</h2>',
+     ));
+?>

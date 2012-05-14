@@ -1,0 +1,61 @@
+<?php
+/*
+Template Name:home_page
+*/
+
+get_header(); ?>
+			
+			<!--==============================content================================-->
+                     <div id="right_side">
+
+        <?php
+		    if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Donation')) : // Each sidebar name
+		?>
+		<?php
+		    endif;
+		?>
+        <div class="spotlights">
+            <?php
+		    if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Help Family')) : // Each sidebar name
+		?>
+		<?php
+		    endif;
+		?>
+        </div>
+    
+    </div><!--#right_side-->
+    
+	<div id="main">
+				
+<div class="video_window">
+    <div class="content">
+        <div class="inner">
+                    <div class="front_slide">
+                                <?php if(function_exists('wp_content_slider')) { wp_content_slider(); } ?>
+		    </div><!--#front_slide-->
+                                  </div><!--#inner-->
+    </div><!--#content-->       
+</div><!--#video_window-->
+	    <div class="spotlights">
+    <?php
+     if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Guarantee')) : // Each sidebar name
+?>
+<?php
+     endif;
+?>
+                
+            
+		<?php
+		    if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Why Donate')) : // Each sidebar name
+		?>
+		<?php
+		    endif;
+		?>
+</div>
+</div><div class="clear">
+    &nbsp;
+</div>
+    </div>   
+			
+
+<?php get_footer(); ?>
